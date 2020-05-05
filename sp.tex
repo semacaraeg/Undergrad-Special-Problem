@@ -1,0 +1,420 @@
+\documentclass[journal]{./IEEE/IEEEtran}
+\usepackage{graphicx}
+
+\newcommand{\SPTITLE}{AJAX-based Database Management System 
+with Multiple Windows Project Viewing
+}
+\newcommand{\ADVISEE}{Sarah Mae A. Empe\~{n}o}
+\newcommand{\ADVISER}{Concepcion L. Khan}
+
+\newcommand{\BSCS}{Bachelor of Science in Computer Science}
+\newcommand{\ICS}{Institute of Computer Science}
+\newcommand{\UPLB}{University of the Philippines Los Ba\~{n}os}
+\newcommand{\REMARK}{\thanks{Presented to the Faculty of the \ICS, \UPLB\
+                             in partial fulfillment of the requirements
+                             for the Degree of \BSCS}}
+        
+\markboth{CMSC 190 Special Problem, \ICS}{}
+\title{\SPTITLE}
+\author{\ADVISEE~and~\ADVISER%
+\REMARK
+}
+%\pubid{\copyright~2009~ICS \UPLB}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% TITLE
+\maketitle
+
+% ABSTRACT
+\begin{abstract}
+The AJAX-based Database Management System with Multiple Windows Project Viewing is a web appplication developed to aid the management of project data records easier and also help the comparison of two or more projects be more efficient.In addition, unlike the other existing systems, which only had one view for a project was available, this system could view upto 20 projects in a single web browser. However when the number of project view increases, the visibility of the content suffers , thus, the number of most desirable project window views was computed using the Criteria Matrix and the Pixel-based computation method. The two methods had the same results which leads to five concurrent project views in a browser.  Further, the access to the system could be limited to users for the confidentiality and security of the data.
+\end{abstract}
+
+
+% INTRODUCTION
+\section{Introduction}
+\\
+\\
+\subsection{Background of the study}
+Nowadays, the web browser has become the major medium for delivering business applications to users. Several benefits such as easy administration and simplified accessibility were achieved in delivering software through the web. However, web application as compared to thick client software like desktop applications has exhibit limited functionality. Not only its functionalities diminished but also the ease of writing suffers due to the unconditional nature of HTTP.
+
+
+Over a decade, developers started to search ways on how to make web sites mimic the look and responsiveness of desktop applications. This started the evolution of web applications from static pages to dynamic pages. One way that made possible for this is via Ajax or (Asynchronous JavaScript and XML) technologies. With this, rich Internet technologies change the way the Web works, bringing exciting new possibilities to Web interfaces and functionalities.
+
+
+However, web applications nowadays only have one view of the entity a user wants to manipulate. When a user clicks a link, the project's information will be shown at a division in the same window. So when a user wants to view a different project and make comparison to the previous one, the user would have to open a new tab or a new browser window. This is somehow inefficient because the user have to go to the other tab or in the separate window just to see both of the projects.
+\\
+\\
+\subsection{Statement of the Problem}
+With the current trends of increasing volumes in database management systems, the comparison of data( e.g  progress of two projects),  is hard to achieve especially because most of the web application database management systems do not have the feature of simultaneously viewing of the data, so the effect is to have only one interface to view the data needed. Thus, there is a need for concurrent data access to make the transactions faster and easier. 
+\\
+\subsection{Significance of the Study}
+The development of a web application database management system with multiple windows project viewing will make an interface for the simultaneous access of data. With this feature, the implementation would generally make an efficient electronic data management system which will aid the monitoring and comparison of the data easier. Further, functionalities such as duplicate prevention, data protection and search will make the data storage, access and retrieval more efficient and reliable.
+\\
+\subsection{Objective of the Study}
+The main objective of this study is to develop a web application database management system for efficient and effective access of the data records.
+
+
+Specifically, this study aims to:
+
+
+1.Create an interface that will enable the company to utilize the system effectively;
+
+
+2.Create a module for security of data by initially verifying the user’s authentication;
+
+
+3.Design a database for the organization’s projects for proper, more secured and easier storage, retrieval and updates of data; 
+
+
+4.Create a module where users can search a certain project for efficient viewing and manipulation;
+
+
+5.Create a module where users can view different entities in different screens.
+\\
+
+% REVIEW OF LITERATURE
+\section{Review of Literature}
+			Database systems had been widely used due to its usefulness in managing data or records. In the University of the Philippines Los Ba\~{n}os, databases probably make up most of the software designed by Computer Science majors. Automating the information system of a company makes use of databases for storing all the records needed for manipulation. There are several information systems done by the undergraduate students for different type of business. 
+
+
+			One of which is the RazCafe, which is a management and accounting product specially designed for facilitating functions inside an Internet Café. 
+
+
+			In 2002, Baltonado developed an Online Database For Processing of UPLB Faculty Service Record. This system generates the FSR of every faculty member and was implemented using MySQL and Java Server Pages.
+
+
+			In managing dental records, Valerio(2007) implemented a web application information system done in PHP, Java and MySQL. The system tracks and manipulates the records of the dental patients of the University Health Service. 
+
+
+			Another is the RQ Soft (Quiambao, 2007), an administration accounting system for auto-parts trading center that is done with Java language and MySQL database server. This system ensures accurate records of business in a systematic manner, and is also capable of processing vast amount of financial information quickly.
+
+
+			In web applications regarding databases, the interface and functionalities have evolved. There has been a high sophistication due to introduction of dynamic representation and incorporation of rich internet applications.Ajax is a kind of next-generation DHTML; hence, it relies heavily on JavaScript to listen to events triggered by user activity and manipulates the visual representation of a page in the browser dynamically. 
+\\
+
+% CONCEPTUAL FRAMEWORK
+\section{Conceptual Framework}
+\\
+\subsection{ZK}
+
+
+ZK is an open-source web development framework. It enables web applications to have the rich user experiences and low development costs that can be seen in desktop applications. ^{[1]}
+\\
+\subsection{MySQL}
+	
+
+MySQL is an open source relational database system which was originally developed to handle large databases much faster than existing solutions and has been successfully used in highly demanding production environments for several years. MySQL runs as a server providing multi-user access to a number of databases. Further, it was first released internally on 23 May 1995. ^{[1]}
+\\
+\subsection{Torque}
+
+
+Torque is an object-relational mapper for java. In other words, Torque lets you access and manipulate data in a relational database using Java objects. It generates the necessary classes from an XML schema describing the database layout. The XML schema can also be used to generate and execute a SQL script which creates all the tables in the database. ^{[1]}
+\\
+\subsection{Eclipse IDE}
+
+
+Eclipse IDE is a software platform comprising extensible application frameworks, tools and a runtime library for software development and management. It is written primarily in Java to provide software developers and administrators an integrated development environment (IDE). ^{[1]}
+\\
+\subsection{Apache Tomcat}
+
+
+Tomcat is a free, open-source implementation of Java Servlet and JavaServer Pages technologies developed under the Jakarta project at the Apache Software Foundation. ^{[1]}
+\\
+\subsection{Mozilla Firefox}
+
+
+Mozilla Firefox is a free and open source web browser descended from the Mozilla Application Suite, managed by the Mozilla Corporation. Firefox.^{[1]}
+\\
+% MATERIALS AND METHODS
+\section{Materials and Methods}
+As part of this study, R.A Mojica and Partners, a firm which caters electrical engineering services such as engineering design and consultancy for various assemblies and manufacturing plants, will be the client for the web application. 
+\\
+\subsection{Installation and Configuration}
+
+
+MySQL Server 5.0, Apache Tomcat 6.0 and Eclipse IDE was installed in a personal computer with Windows XP and Java JDK 1.6. Afterwhich, ZK and Torque was configured with Eclipse IDE.
+\\
+\subsection{Development Phase}
+\\
+\\
+\subsubsection{Graphical User Interface (GUI)}
+	
+
+		The client program was developed using ZK and Java programming languages. The interface of multiple screens and the tables functionalities such ass ADD, EDIT and DELETE were also created.
+\\
+\begin{center}
+\includegraphics[height=50mm]{login.png}\\
+\caption{Fig 1. GUI of the LOGIN Page}
+\end{center}
+\\
+
+
+\subsubsection{Database Development and Functionalities}
+
+
+Access to the database, where projects data were stored, was added to the graphical user interface. Functionalities such as Add, Edit, Delete and Search were embedded in it.
+
+
+ 	The database system was consisted of 6 tables which are as follows:
+\begin{itemize}
+\\
+\\
+\item User’s Table that contains the username, password and user type.
+\\
+\begin{center}
+\includegraphics[height=17mm]{userTable.png}\\
+\caption{Fig 2. Schema of USER}
+\\
+\\
+\end{center}
+\\
+\item Engineering Table that contains the data from the engineering section such as project start date, design team and etc.
+\\
+\begin{center}
+\includegraphics[height=35mm]{enggTable.png}\\
+\caption{Fig 3. Schema of ENGINEER}
+\\
+\\
+\end{center}
+\\
+\item Finance Table that contains the data from the finance section, also another table for payments was created which consists of original receipt number, amount of the project and etc.
+\\
+\begin{center}
+\includegraphics[height=35mm]{financeTable.png}\\
+\caption{Fig 4. Schema of FINANCE}
+\\
+\\
+\end{center}
+\\
+\item Cadd Table that contains the data from cadd section such as Cadd in Charge, date of submission and etc.
+\begin{center}
+\includegraphics[height=50mm]{caddTable.png}\\
+\caption{Fig 5. Schema of CADD}
+\\
+\\
+\end{center}
+\\
+\item Picture Table that contains the uploaded image or blueprint image of a certain project.
+\\
+\begin{center}
+\includegraphics[height=13mm]{pictureTable.png}\\
+\caption{Fig 6. Schema of PICTURE}
+\\
+\\
+\end{center}
+\end{itemize}
+\\
+\subsection{Testing Phase}
+
+The system was tested to obtain the maximum number of window views it could handle. Also, the number of most desirable window views was computed. There are two testing methods used for the system which are the criteria matrix and the Pixel-based computation.
+\\
+\subsubsection{CRITERIA MATRIX}
+These are the criteria used in the Criteria Matrix Method:
+\begin{itemize}
+\item Effect on the efficiency of the system (30\%): Does it slow down the system
+\item Content Visibility (30\%): Are all the information of the paticular project can be seen
+\item Number of projects viewed (40\%)
+\end{itemize}
+
+
+The third criterion had the highest percentage because one of the system's objectives is to view two or more projects simultaneously. The first and second criteria had the same percentage because those are necessary for the web application itself.
+\\
+\subsubsection{PIXEL-BASED COMPUTATION}
+\\
+In the second method, the formula was used: 
+\\
+\begin{center}
+\begin{math}
+	NPV	= \frac{(TNP- browserDetailPixels)}{(w * h)}
+\end{math}
+\end{center}
+\\
+\textit {where: \newline
+NPV = number of project views \newline
+TNP = total number of pixels (based on resolution)\newline
+w = get window view minimum width\newline
+h = get window view minimum height}
+
+\\
+\\
+% RESULTS AND DISCUSSION
+
+\section{Results and Discussion}
+\subsection{Functionalities}
+\begin{center}
+\\
+\includegraphics[height=50mm]{screenshots2.png} \\
+\caption{Fig 7. Screenshots of the Web Application}
+\\
+\\
+\end{center}\\
+\\
+\\
+\subsubsection{Log- In Module}
+This module is responsible for the user’s authentication whether to give full or limited access. With this, security and protection of data was achieved. 
+
+
+There are four types of users in the system: Administrator who has the full access; Engineering Staff and/or Cadd Staff who has access in Engineering and Cadd Section only; and the Finance Staff who has access in the Finance section only.\\
+\\
+\subsubsection{Create User Module}
+Function is to register or add new user of the system. Yet, only the administrator is allowed to access this section.\\
+\\
+\subsubsection{Engineer Module}
+\begin{itemize}
+\item ADD: Its function is to add new record of project in the system. 
+\item EDIT: Its function is to edit or update an existing project record whenever there is a progress or alterations made on the project.
+\item DELETE: Its function is to erase already finished projects.
+\item SEARCH Project. Its function is to search existing project records in the system. This can be done via Search by Client, Category, Project Engineer and Project Name.\\
+
+\begin{center}
+\\
+\includegraphics[height=50mm]{addengg.png} \\
+\caption{Fig 8. Adding new entry in Engineering Section}
+\\
+\\
+\end{center}
+\end{itemize}
+
+\subsubsection{Finance Module}
+
+	There are two sections here in the finance module which are the Receivables and Payments. 
+	
+
+	1. Receivables
+\begin{itemize}
+\item ADD: Add new entries in the database system.
+\item EDIT: Updates or alters entries.
+\item DELETE: Delete entry when not needed anymore.
+\item SEARCH: Search by Project name and by Remarks are available.
+\end{itemize}
+
+There are computations done here. Some of the fields which were automatically computed were Total Payments, Balance, and Amount of Work Accomplished. \\
+
+2.	Payments
+A new table was created for this because there are more that one payment for a particular project.
+\begin{itemize}
+\item ADD: Adds new payment for a project.
+\item DELETE: Deletes a payment.
+\item SEARCH: Search by Project name is available to view all the payments in a particular project.
+\\
+\begin{center}
+\\
+\includegraphics[height=50mm]{finance.png} \\
+\caption{Fig 9. Screenshot of the Finance Section}
+\\
+\\
+\end{center}
+\end{itemize}
+
+\subsubsection{Cadd Module}
+\begin{itemize}
+\item ADD: Add new entries in the database system.
+\item EDIT: Updates or alters entries.
+\item DELETE: Delete entry when not needed anymore.
+\item SEARCH: Search by Project name and by Cadd in Charge and by Project Engineer are available.
+\\
+\end{itemize}
+
+\subsubsection{Upload Image Module}
+The function of this module is for uploading purposes of the blueprint images or simple images in the database.
+\\
+
+\subsubsection{Classic View Module}
+		This module was created for viewing of data in a table or grid form. This is an option if a user wants to view in multiple screens or table form.
+\\
+\subsubsection{Multiple Windows Module}
+The function is to display different data in each screen or window for easy viewing and monitoring of the project. 
+
+\begin{center}
+\includegraphics[height=80mm]{screenShots.png} \\
+\caption{Fig 11. Screenshots of the Multiple Windows}
+\\
+\\
+\end{center}\\
+\\
+\\
+\subsection{Results of the Testing}
+The multiple windows module can view as much as 20 projects in a single browser simultaneously. However, the views became smaller as the number increases. Thus,the number of most desirable window views was computed. \\
+\\
+\subsubsection{CRITERIA MATRIX}
+In the criteria matrix tests were ranked according to the priority (1-most satisfied, largest- least satisfied). The test with the smallest TOTAL value indicates that the test is the most desirable and vice versa. The total is computed with:
+\begin{center}
+\begin{equation}
+  TOTAL = Priority * Percentage of Criterion
+\end{equation}
+\end{center}
+
+There are six test solutions used which are as follows: 1, 2, 5, 10,15 and 20 project window views.
+\begin{center}
+\includegraphics[height=28mm]{screens_testTable.png}\\
+\caption {Fig 12. Table of the Test for Number of Most Desired Project Window Views using Criteria Matrix}
+\\
+\\
+\end{center}
+
+
+ According to the results of the Criteria Matrix, the number of most desired project window views is five. The results show that with viewing five projects simultaneously, the efficiency of the system and the content will not suffer.
+\newline
+\newline
+\begin{center}
+\includegraphics[height=30mm]{barGraph.png}\\
+\caption{ Fig 13. Graph of the results of the first Testing Method}
+\\
+\\
+\end{center}
+\\
+\\
+\subsubsection{PIXEL-BASED COMPUTATION}
+\\
+In the second method, Pixel-based computation, the four resolutions which are common in desktops were used which are as follows: 1280 x 800, 1280 x 768, 1024 x 768, and 800 x 600.
+\\
+\\
+\begin{center}
+\\
+\includegraphics[height=20mm]{tablePixel.png}\\
+\caption{ Fig 14. Table of the results of the second Testing Method }
+\\
+\\
+\end{center}\\
+\\
+In the results shown by the Pixel-based computation method, the best resolution to used to optimize the viewing of simultaneous projects is by using the 1280 x 800 or 1280 x 768 resolution which can view for as much as five projects.
+\\
+The two testing methods had the same results for the number of most desired project views which is five. However, the second method is more accurate to use than the first method because the actual width and height of the project view were computed.
+
+% CONCLUSION
+\section{Summary and Conclusion}
+The main objective of this system is to develop a web-application database management system that will be of great help in managing project records. Also, the system was expected to be able to efficiently monitor arbitrarily number of projects specifically upto 20 projects. However, the number of most desirable project window views is five in which the efficiency of the system and the content will not suffer. With this feature of the web application, comparison of two or more progress in the project would be more efficient.
+\\
+The system was developed with ZK framework and MySQL Server 5.0 as the database backend. Also, the R.A Mojica and Partners was used for sample data.
+\\
+%RECOMMENDATION
+\section{Recommendation}
+The system is able to achieve its objectives but in the future use, some problems might exist that the developer was not able to predict, thus revision and updates would be necessary. An additional function of having a report generator for back-up purposes may be included.
+% BIBLIOGRAPHY
+%\section{Bibliography}
+\begin{thebibliography}{1}
+\bibitem{}Wikipedia: The Free Encyclopedia. (http://www.wikipedia.org)
+\bibitem{}ZK. (http://www.zkoss.org/)
+\bibitem{}Sun Microsystems. (http://java.sun.com)
+\bibitem{}
+Baltonado, NA.2002. Online Database for Processing of UPLB Faculty Service Record. An Undergraduate Special Problem.Institute of Computer Science. University of the Philippines Los Banos.
+\bibitem{}
+Quiambao, R.2007.RQ Soft: An Administration Accounting System for an Auto-Parts Trading Center. \newline
+An Undergraduate Special Problem. Institute of Computer Science. University of the Philippines Los Banos.
+\bibitem{}
+Valerio, MA.2007. University Health Service: Dental Record Management System.An Undergraduate Special Problem.Institute of Computer Science. University of the Philippines Los Banos.
+\end{thebibliography}
+
+% BIOGRAPHY
+\begin{biography}[{\includegraphics[height=30mm]{sarah.jpg}}]{Sarah Mae A. Empe\~{n}o}
+is an undergraduate from the University of the Philippines Los Ba\~{n}os taking-up Bachelor of Science in Computer Science. Some of her projects include ELEXIS:Electronic Voting System, The CPS Triangle Web Site, and the LAN POKEMON game. Further, she is the Vice President for Internal Affairs of the CPS Triangle for the A.Y 2007-2008 and A.Y 2008-2009. 
+\end{biography}
+
+
+
+\end{document}
+ 
